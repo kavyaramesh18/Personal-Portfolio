@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link rel="website icon" type="png" href="icon.png">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    overflow-x: hidden;
+}
+body{
+    color: #ededed;
+    /* background-color: rgb(7, 7, 60); */
+    background: #081b29;
+}
+.header
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    animation:slideRight 1s ease forwards;
+}
+.navbar a{
+   display: inline-block;
+   font-size: 25px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+   margin-top: 35px;
+   transition: .3s;
+   padding-left: 20px;
+   animation:slideTop .5s ease forwards
+}
+.navbar a:hover{
+    color: #0ef;
+}
+.home{
+    position: relative;
+    width:100%;
+    justify-content: space-between;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.myimage{
+    width: 80%;
+    height: 350px;
+    border-radius: 50%;
+   margin-left: 80px;
+   margin-bottom: 30px;
+   margin-top: 30px;
+   box-shadow: 5px 5px 5px 5px lightblue;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    animation: slideBottom ;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h3 span{
+    color: #0ef;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+}
+.home-content p{
+    font-size: 20px;
+}
+
+.home-sci {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.home-sci a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #0ef;
+    margin: 0 60px 5px;
+    transition: color 0.3s;
+    
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px; 
+    transition: box-shadow 0.3s;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: -80px;
+    
+}
+.about-img img{
+    padding-bottom: 20%;
+    width: 350px;
+    height: 400px;
+    margin-left: 200px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: #0ef;
+    margin-left: 40px;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.h1{
+    margin-left: 700px;
+    font-size: 40px;
+}
+span{
+    color: #0ef;
+}
+.skill{
+    display: flex;
+    flex-direction: row;
+}
+.html img{
+    width: 70px;
+    height: 50px;
+    margin-left: 165px;
+}
+.html{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.html h2{
+    color: #0ef;
+    margin-left: 165px;
+    font-family: sans-serif;
+}
+.html p{
+    margin-left: 40px;
+    font-size: 17px;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+.css{
+    
+    margin-left: 300px;
+}
+.css img{
+    width: 70px;
+    height: 50px;
+    margin-left: 150px;
+}
+.css{
+    margin-top: 100px;
+    margin-left: 200px;
+}
+.css h2{
+    color: #0ef;
+    margin-left: 160px;
+    font-family: sans-serif;
+}
+.css p{
+    margin-left: 40px;
+    font-size: 17px;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+.js{
+    
+    margin-left: 300px;
+}
+.js img{
+    width: 70px;
+    height: 50px;
+    margin-left: 150px;
+}
+.js{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+.js h2{
+    color: #0ef;
+    margin-left: 130px;
+    font-family: sans-serif;
+}
+.js p{
+    margin-left: 40px;
+    font-size: 17px;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+.skill1{
+    display: flex;
+    flex-direction: row;
+}
+.cpp{
+    margin-left: 140px;
+}
+.cpp img{
+    width: 70px;
+    height: 50px;
+    margin-left: 165px;
+}
+.cpp{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.cpp h2{
+    color: #0ef;
+    margin-left: 170px;
+    font-family: sans-serif;
+}
+.cpp p{
+    margin-left: 40px;
+    font-size: 17px;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+.java img{
+    width: 70px;
+    height: 50px;
+    margin-left: 100px;
+}
+.java{
+    margin-top: 100px;
+    margin-left: 200px;
+}
+.java h2{
+    color: #0ef;
+    margin-left: 105px;
+    font-family: sans-serif;
+}
+.java p{
+    margin-left: -30px;
+    font-size: 17px;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+}
+.python{
+    margin-left: 300px;
+}
+.python img{
+    width: 70px;
+    height: 50px;
+    margin-left: 300px;
+}
+.python{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+.python h2{
+    color: #0ef;
+    margin-left: 300px;
+    font-family: sans-serif;
+}
+.python p{
+    margin-left: 180px;
+    font-size: 17px;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contact{
+     margin-top: 70px;
+     margin-left: 750px;
+     font-size: 40px;
+}
+.info h1{
+    margin-top: 100px;
+    margin-left: 160px;
+    font-size: 25px;
+}
+#mail{
+    margin-left: 160px;
+    margin-top: 15px;
+}
+.info1 h5{
+    margin-left: 190px;
+    margin-top: -20px;
+    position: absolute;
+}
+#phone
+{
+    margin-left: 160px;
+    margin-top: 15px;
+}
+.phone h5{
+    margin-left: 190px;
+    position: absolute;
+    margin-top: -20px;
+}
+#location{
+    margin-left: 160px;
+    margin-top: 15px;
+}
+.location h5{
+    margin-top: -20px;
+    margin-left: 190px;
+    position: absolute;
+}
+.name{
+    margin-left: 700px;
+    margin-top: -150px;
+    position: absolute;
+    background-color: black;
+    width: 500px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: none;
+}
+::placeholder
+{
+    padding-left: 30px;
+    padding-top: 200px;
+}
+.email{
+    margin-left: 700px;
+    margin-top: -100px;
+    position: absolute;
+    background-color: black;
+    width: 500px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: none;
+}
+.msg{
+    margin-left: 700px;
+    margin-top: -50px;
+    position: absolute;
+    background-color: black;
+    width: 500px;
+    height: 135px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: none;
+}
+.btn{
+    background-color: #0ef;
+    width: 100px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: none;
+    margin-top: 120px;
+    margin-left: 705px;
+    cursor: pointer;
+    color:#081b29;
+}
+.btn:hover{
+    opacity: 8;
+    background-color: white;
+}
+  /* Skills Section */
+  #skills {
+    margin-top: 60px;
+            background: white;
+            color: black;
+            height: 100px;
+        }
+
+        .skill {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            
+        }
+
+        /* Projects Section */
+        #projects {
+            background: #f4f4f4;
+            color: #081b29;
+            
+        }
+
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: #0ef;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            text-align: center;
+            color: #081b29;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            background: #081b29;
+            color: #ededed;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .info a {
+            color: #0ef;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+</style>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Kavyashree TR</h1>
+        <h3>And I'm a <span class="text"></span></h3>
+        <p>I am a front-end web developer</p>
+        <a href="#" class="btn-box">More about me</a>
+    </div>   
+    <div class="image">
+        <img src="image1.jpg" class="myimage">
+    </div>
+    <span class="home-imghover"></span>
+</section>
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="image2.jpg">
+    </div>
+    <div class="about-text">
+        <h2>About<span>Me</span></h2>
+        <h4>Front end Developer</h4>
+        <p>I am a final year student at Nitte Meenakshi Institute Of Technology, pursuing my bachelors in Computer Science and Engineering.I'm a passionate front-end developer based in bangalore, specializing in HTML, CSS, and JavaScript. I create user-centric web experiences, backed by a strong foundation in front-end technologies. I believe in the power of design and code to shape the digital world.
+        </p>
+    </div>
+</section>
+
+
+  <section id="skills">
+    <h1>My <span>Skills</span></h1>
+    <div class="skill">
+        <p>HTML, CSS, Tailwind CSS, React.js, JavaScript, and more!</p>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h1>My <span>Projects</span></h1>
+    <div class="project">
+        <div class="project-card">
+            <h2>FoodPanda Website</h2>
+            <p>A responsive food delivery website built using HTML and CSS.</p>
+            <a href="#" class="btn-box">View Project</a>
+        </div>
+        <div class="project-card">
+            <h2>Uber Website Clone</h2>
+            <p>Cloned Uber's website layout using HTML and CSS for practice.</p>
+            <a href="#" class="btn-box">View Project</a>
+        </div>
+        <div class="project-card">
+            <h2>Netflix homepage</h2>
+            <p>Developed an homepage of netflix using HTML,CSS and Javascript.</p>
+            <a href="#" class="btn-box">View Project</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h1>Contact <span>Me</span></h1>
+    <div class="info">
+        <p>Email: <a href="mailto:kavyashree@example.com">kavyashree@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/kavyashree</a></p>
+        <p>GitHub: <a href="#">github.com/kavyashree</a></p>
+    </div>
+</section>
+<script>
+    var typed=new Typed(".text",{
+    strings:["Frontend Developer","Web Developer"],
+    typeSpeed:100,
+    backSpeed:100,
+    backDelay:1000,
+    loop:true
+});
+</script>
+</body>
+</html>
